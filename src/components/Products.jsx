@@ -5,38 +5,106 @@ import products from "../assets/3.png";
 const useStyles = makeStyles((theme) => ({
   main: {
     textAlign: "center",
+    [theme.breakpoints.up("md")]: {
+      textAlign: "center",
+    },
+    [theme.breakpoints.up("lg")]: {
+      textAlign: "center",
+    },
   },
   heading: {
-    fontSize: "14.5px",
+    fontSize: "11px",
     textAlign: "center",
     padding: " 15px 0px 15px 0px",
+    [theme.breakpoints.up("md")]: {
+      fontSize: "11.5px",
+      textAlign: "center",
+      padding: " 15px 0px 15px 0px",
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "14.5px",
+      textAlign: "center",
+      padding: " 15px 0px 15px 0px",
+    },
   },
   products_img: {
     width: "83%",
+    [theme.breakpoints.up("md")]: {
+      width: "83%",
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "83%",
+    },
   },
   border: {
     borderTop: "2px solid #ec3237",
     padding: "15px 0px",
-    marginLeft: "20px",
-    marginRight: "20px",
+    [theme.breakpoints.up("md")]: {
+      borderTop: "2px solid #ec3237",
+      padding: "15px 0px",
+      marginLeft: "20px",
+      marginRight: "20px",
+    },
+    [theme.breakpoints.up("lg")]: {
+      borderTop: "2px solid #ec3237",
+      padding: "15px 0px",
+      marginLeft: "20px",
+      marginRight: "20px",
+    },
   },
   products_name: {
-    fontSize: "15px",
+    fontSize: "10.8px",
     padding: "15px 0px",
+    [theme.breakpoints.up("md")]: {
+      fontSize: "12px",
+      padding: "15px 0px",
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "15px",
+      padding: "15px 0px",
+    },
   },
   title: {
-    fontSize: "15px",
+    fontSize: "12px",
     fontWeight: "bold",
+    [theme.breakpoints.up("md")]: {
+      fontSize: "12px",
+      fontWeight: "bold",
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "15px",
+      fontWeight: "bold",
+    },
   },
   line: {
     color: "#ec3237",
     fontWeight: "bold",
+    [theme.breakpoints.up("md")]: {
+      color: "#ec3237",
+      fontWeight: "bold",
+    },
+    [theme.breakpoints.up("lg")]: {
+      color: "#ec3237",
+      fontWeight: "bold",
+    },
   },
   all_products: {
     paddingTop: "15px",
+    [theme.breakpoints.up("md")]: {
+      paddingTop: "15px",
+    },
+    [theme.breakpoints.up("lg")]: {
+      paddingTop: "15px",
+    },
   },
   sub_title: {
-    fontSize: "14px",
+    fontSize: "11px",
+    [theme.breakpoints.up("md")]: {
+      fontSize: "11px",
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "14px",
+    },
   },
 }));
 
@@ -45,7 +113,7 @@ const Products = () => {
   return (
     <div>
       <Grid container item>
-        <Grid item lg={12} className={classes.main}>
+        <Grid item lg={12} md={12} className={classes.main}>
           <Typography className={classes.heading}>
             INSTALLED OVER 10 LAKHS STAR RATED PUMPSETS ACROSS THE COUNTRY
             RESULTING IN A CUMULATIVE SAVING OF MORE THAN 9,000 MILLION UNITS OF

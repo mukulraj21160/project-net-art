@@ -7,25 +7,69 @@ import image from "../assets/2.png";
 const useStyles = makeStyles((theme) => ({
   main: {
     display: "flex",
+    textAlign: "center",
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
+    },
+    [theme.breakpoints.up("lg")]: {
+      display: "flex",
+    },
   },
   award: {
-    width: "100%",
+    width: "55%",
+    [theme.breakpoints.up("md")]: {
+      width: "100%",
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "100%",
+    },
   },
   heading: {
     fontWeight: 700,
-    fontSize: "16px",
-    textAlign: "left",
+    fontSize: "12px",
+    [theme.breakpoints.up("md")]: {
+      fontWeight: 700,
+      fontSize: "12px",
+      textAlign: "left",
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontWeight: 700,
+      fontSize: "16px",
+      textAlign: "left",
+    },
   },
   img: {
     width: "100%",
+    [theme.breakpoints.up("md")]: {
+      width: "100%",
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "100%",
+    },
   },
   sub_heading: {
-    fontSize: "15px",
+    fontSize: "11.5px",
     textAlign: "left",
-    paddingLeft: "25px",
+    paddingLeft: "10px",
+    [theme.breakpoints.up("md")]: {
+      fontSize: "12px",
+      textAlign: "left",
+      paddingLeft: "15px",
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "15px",
+      textAlign: "left",
+      paddingLeft: "25px",
+    },
   },
   bullets: {
-    fontSize: "12px",
+    fontSize: "8px",
+    [theme.breakpoints.up("md")]: {
+      fontSize: "8px",
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "12px",
+    },
   },
 }));
 
@@ -34,10 +78,10 @@ const Award = () => {
   return (
     <div>
       <Grid container item className={classes.main}>
-        <Grid item lg={4}>
+        <Grid lg={4} md={4}>
           <img src={award} alt="award" className={classes.award} />
         </Grid>
-        <Grid item lg={8}>
+        <Grid item lg={8} md={8}>
           <Typography className={classes.heading}>
             C.R.I. PUMPS WINS THE NATIONAL ENERGY CONSERVATION AWARD 2018 for
             the 4th time.
@@ -56,7 +100,7 @@ const Award = () => {
             control panel.{" "}
           </Typography>
           <img src={image} alt="img" className={classes.img} />
-          <Typography>
+          <Typography className={classes.sub_heading}>
             Government of India has awarded the{" "}
             <span style={{ fontWeight: "bold" }}>
               "National Energy Conservation Award 2018"
